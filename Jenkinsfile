@@ -17,14 +17,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building Application...'
-                sh 'python --version'
+                bat 'python --version'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running Tests...'
-                sh 'python -m unittest'
+                bat 'python -m unittest'
             }
         }
 
