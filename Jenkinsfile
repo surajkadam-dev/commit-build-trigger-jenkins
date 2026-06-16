@@ -1,18 +1,7 @@
 pipeline {
     agent any
 
-    triggers {
-        githubPush()
-    }
-
     stages {
-
-        stage('Clone Repository') {
-            steps {
-                git branch: 'main',
-                url: 'https://github.com/surajkadam-dev/commit-build-trigger-jenkins.git'
-            }
-        }
 
         stage('Build') {
             steps {
@@ -23,8 +12,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Running Tests...'
-                bat 'python -m unittest'
+                echo 'No Test File Available'
             }
         }
 
